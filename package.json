@@ -1,6 +1,6 @@
 {
   "name": "react-inject-dom",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Binds an HTML element by selector to a ReactElement and renders to a DOM tree (with optional redux injection).",
   "main": "lib/index.js",
   "files": [
