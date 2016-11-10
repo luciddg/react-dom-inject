@@ -1,6 +1,6 @@
 {
-  "name": "react-dom-inject",
-  "version": "0.1.12",
+  "name": "react-inject-dom",
+  "version": "0.1.13",
   "description": "Binds an HTML element by selector to a ReactElement and renders to a DOM tree (with optional redux injection).",
   "main": "lib/index.js",
   "files": [
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cchamberlain/react-dom-inject.git"
+    "url": "git+https://github.com/luciddg/react-dom-inject.git"
   },
   "keywords": [
     "React",

@@ -12,8 +12,10 @@ import { Provider } from 'react-redux'
 const ReactDOMInject = (ReactElement, store) => {
   const _render = (element, props = {}) => {
     let dataset = element.dataset || datasetShim(element)
-    if(dataset)
-      Object.assign(props, dataset)
+    if(dataset) {
+      // In Safari, Object.assign does not work with DOMStringMap
+      Object.assign(props, JSON.parse(JSON.stringify(dataset)));
+    }
     let __html = element.innerHTML.length > 0 ? element.innerHTML : null
     //const Element = () => __html ? <ReactElement {...props} dangerouslySetInnerHTML={{ __html }} /> : <ReactElement {...props} />
     return ReactDOM.render(<ReactElement {...props} store={store} />, element)
